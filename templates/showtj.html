@@ -1,0 +1,47 @@
+{% load staticfiles %}
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+{# <script src="{% static "admin/js/jquery-latest.min.js" %}"></script> #}
+{# <script src="{% static 'mickey/ajax_example.js' %}"></script> #}
+{# <script type='text/javascript' src='http://code.jquery.com/jquery-1.8.2.js'></script> #}
+
+
+<!-- 引入AJAX(必要) -->
+<script type="text/javascript">
+
+
+//賦與按鈕事件,點擊執行AJAX
+$(document).ready(function(){
+ $('#test').keyup(function(){  //當輸入時觸發test_ajax()並且傳入輸入框的值當參數
+    var input_string = $("#test").val();
+    $.ajax({
+        url : "{% url 'aaj' %}", 
+        // url : "/ajaxexample_json", 
+        type : "GET",
+        dataType: "json", 
+        data : {
+            client_response : input_string,
+            csrfmiddlewaretoken: '{{ csrf_token }}'
+            },
+            success : function(json) {
+                alert('不可能success');},
+            error : function(xhr,errmsg,err) {
+                $('#show_area').append(xhr.responseText)+'<br>';
+
+            }
+    });
+    return false;
+      // $("#show_area").css({"color":"red","display":"inline-block"});
+ });
+});
+
+
+</script>
+<h1>
+    show tj  ajax  test
+</h1>
+
+<div>以ajax實現頁面不刷新,從前端將值傳送到後端處理,並且回傳給前端顯示</div>
+<input type="text" id="test" value=""/>
+<div id="show_area">show_area</div>
+<a href="{% url 'inin' %}"> goto index </a>

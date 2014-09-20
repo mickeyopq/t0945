@@ -1,0 +1,236 @@
+{% load staticfiles %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+
+    <title>DataTables example - Scroll - vertical</title>
+<script src="{% static "mickey/jquery.js" %}"></script>
+<script src="{% static "mickey/jquery.dataTables.js" %}"></script>
+<script src="{% static "mickey/shCore.js" %}"></script>
+<link href="{% static "mickey/css/bootstrap.css" %}" rel="stylesheet">
+<link href="{% static "mickey/jquery.dataTables.css" %}" rel="stylesheet">
+<script type="text/javascript" language="javascript" class="init">
+
+$(document).ready(function() {
+    $('#example').dataTable( {
+        // "scrollY":        "920px",  //控制table的scrollY
+        "scrollCollapse": true,
+        "paging":         false,
+        "bFilter": false,
+  
+    } );
+} );
+
+    </script>
+<style>
+#whenprint{
+    display: none;
+}
+.create-div{
+    /*padding: 50px;*/
+}
+    .side-table{
+        width: 599px;
+    }
+    th,td{
+        text-align: center;
+    }
+    .form-group-input{
+  display: inline-block;
+  width: 177px;
+
+    }
+</style>
+{# 下面是原後端的code #}
+<style>
+/*@media print {
+    body * {
+        display: none;
+    }
+}
+@media print{
+    .cart{
+        
+    display: inline-block;
+    }
+}
+*/
+.cart{
+    display: none;
+    /*display: inline-block;*/
+    /*bottom: 0;*/
+/*    background-color: #9bffa0;
+    height:466px;
+    width:441;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    overflow-y: auto;
+*/
+}
+.ddd{
+    color:#1afd1b;
+    font-size: 99;
+}
+</style>
+{# JQUERY版本未知 #}
+{# <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script> #}
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#print').click(function(){
+        // $("#result").css({"":"","display":"none"});
+$('<style media="print"> #noprint *{display: none;} </ style>').appendTo('head'); 
+$('<style media="print"> #whenprint{display: table;} </ style>').appendTo('head'); 
+// $('<style media="print"> #noprint *{visibility: hidden;} </ style>').appendTo('head'); 
+// $('<style media="print"> #whenprint{visibility: visible;} </ style>').appendTo('head'); 
+        window.print();  
+return false;
+    })
+});
+// ]]></sc
+//賦與按鈕事件,點擊執行AJAX  visibilityvisibility: hidden;}visibility: visible;
+$(document).ready(function(){
+$('#clrPrint').click(function(){
+$("#rcc").empty();
+$("#cartid").css({"":"","display":"none"});
+});
+});
+$(document).ready(function(){
+ $('.jprint').click(function(){  //當輸入時觸發test_ajax()並且傳入輸入框的值當參數
+  $("#cartid").css({"":"","display":"inline-block"});
+    // var input_string = $("#test").val();
+         var input_string= $(this).data('myid');
+    // alert(myid);
+    $.ajax({
+        url : "{% url 'rqid' %}", 
+        // url : "/ajaxexample_json", 
+        type : "GET",
+        dataType: "json", 
+        data : {
+            client_response : input_string,
+            csrfmiddlewaretoken: '{{ csrf_token }}'
+            },
+            success : function(json) {
+            var jsonResponse = eval(json);
+            // alert(jsonResponse);
+            $('#rcc').append( '<li>資料： ' + jsonResponse+'</li>');
+            $('#when_pbody').append( '<tr> <td>00000</td> <td>' + jsonResponse+'</td> </tr>');
+            },
+            error : function(xhr,errmsg,err) {
+                // alert(xhr.responseText);
+            $('#rcc').append( '<li>資料： ' + xhr.responseText+'</li>');
+            $('#when_pbody').append( '<tr> <td>00000</td> <td>' + xhr.responseText+'</td> </tr>');
+            }
+    });
+    return false;
+ });
+});
+</script>
+
+</head>
+<body>
+<div class="container" id="noprint">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+<h2>批次列印 and JS表格排序</h2>
+<div class="alert alert-warning">
+<strong>描述牆</strong>還有json ajax的bug和功能未完成;bug:按F5會重新送出;中文排序怪怪的
+</div>    
+
+            <div class="row clearfix">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+<div class="form-group create-div">
+<form action="{% url 'inin' %}" method="GET">
+<!-- <label>Text Input with Placeholder</label> -->
+<input name="tel" class="form-control form-group-input" placeholder="輸入資料">
+<input type="submit" class="btn btn-success" value=" 送出資料">
+</form>
+</div>    
+ 
+
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+
+            <div class="row clearfix">
+<div class="col-md-8 column">
+    <div class="container side-table">
+        <section>
+            <table id="example" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>item id</th>
+                        <th>資料</th>
+                        <th>刪除</th>
+                        <th>加入列印</th>
+                    </tr>
+                </thead>
+                <tbody>
+                            {% if pps %}
+                            {% for pp in pps %}
+                    <tr>
+                                
+                        <td> {{ pp.id }}</td>
+                        <td>{{ pp.tel }}</td>
+                        <td><a href="{% url 'delete' %}?mid={{ pp.id }}">刪除</a>
+                        </td>
+                        <td>
+<button type="button" class="btn btn-link jprint" data-myid="{{ pp.id }}">加入列印</button>
+{# <button class="jprint" data-myid="{{ pp.id }}">加入列印</button> #}
+                        </td>
+                    </tr>
+                            {% endfor %}
+                            {% endif %}
+                </tbody>
+            </table>
+
+
+        </section>
+    </div>
+</div>
+                <div class="col-md-4 column">
+                     <div class="panel panel-info cart" id="cartid">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">列印車</h3>
+                            </div>
+                            <div class="panel-body">
+                     <button id="print" type="button" class="btn btn-info" style="width:153px;">送去列印</button>
+                     <button id="clrPrint" class="btn btn-danger" style="width:153px;">取消</button>
+
+                     <hr>
+                    <ul id="rcc">
+                    </ul>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{# 列印時才顯示，when print visible #}
+
+    <div >
+        <section>
+            
+            <table id="whenprint" class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>item id</th>
+                        <th>資料</th>
+                    </tr>
+                </thead>
+                <tbody id="when_pbody">
+                    
+                </tbody>
+            </table>
+        </section>
+        </div>
+</body>
+</html>

@@ -1,0 +1,520 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-30 22:24+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: god/templates/403.html:4
+msgid "forbidden"
+msgstr ""
+
+#: god/templates/403.html:6 god/templates/404.html:6 god/templates/500.html:6
+msgid "error"
+msgstr ""
+
+#: god/templates/403.html:9
+msgid "We're sorry, but the requested action is forbidden"
+msgstr ""
+
+#: god/templates/404.html:4 god/templates/admin/404.html:4
+#: god/templates/admin/404.html.py:8
+msgid "Page not found"
+msgstr ""
+
+#: god/templates/404.html:9 god/templates/admin/404.html:10
+msgid "We're sorry, but the requested page could not be found."
+msgstr ""
+
+#: god/templates/500.html:4
+msgid "Server Error"
+msgstr ""
+
+#: god/templates/500.html:9
+msgid ""
+"There's been an error. It's been reported to the site administrators via e-"
+"mail and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: god/templates/admin/500.html:6 god/templates/admin/app_index.html:7
+#: god/templates/admin/base.html:51 god/templates/admin/change_form.html:19
+#: god/templates/admin/change_list.html:41
+#: god/templates/admin/delete_confirmation.html:7
+#: god/templates/admin/delete_selected_confirmation.html:7
+#: god/templates/admin/invalid_setup.html:6
+#: god/templates/admin/object_history.html:7
+#: god/templates/admin/auth/user/change_password.html:13
+#: god/templates/mainpage/logged_out.html:6
+#: god/templates/registration/logged_out.html:6
+#: god/templates/registration/password_change_form.html:26
+#: god/templates/reversion/recover_form.html:8
+#: god/templates/reversion/recover_list.html:8
+#: god/templates/reversion/revision_form.html:8
+#: god/templates/system/default/menu.html:5
+msgid "Home"
+msgstr "首頁"
+
+#: god/templates/admin/500.html:7
+msgid "Server error"
+msgstr ""
+
+#: god/templates/admin/500.html:11
+msgid "Server error (500)"
+msgstr ""
+
+#: god/templates/admin/500.html:14
+msgid "Server Error <em>(500)</em>"
+msgstr ""
+
+#: god/templates/admin/500.html:15
+msgid ""
+"There's been an error. It's been reported to the site administrators via "
+"email and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: god/templates/admin/actions.html:4
+msgid "Run the selected action"
+msgstr ""
+
+#: god/templates/admin/actions.html:4
+msgid "Go"
+msgstr ""
+
+#: god/templates/admin/actions.html:11
+msgid "Click here to select the objects across all pages"
+msgstr ""
+
+#: god/templates/admin/actions.html:11
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr ""
+
+#: god/templates/admin/actions.html:13
+msgid "Clear selection"
+msgstr ""
+
+#: god/templates/admin/app_index.html:10
+#, python-format
+msgid "%(name)s"
+msgstr ""
+
+#: god/templates/admin/base.html:30
+msgid "Welcome,"
+msgstr ""
+
+#: god/templates/admin/base.html:35
+#: god/templates/registration/password_change_form.html:15
+msgid "Documentation"
+msgstr ""
+
+#: god/templates/admin/base.html:38
+#: god/templates/admin/auth/user/change_password.html:17
+#: god/templates/admin/auth/user/change_password.html:51
+#: god/templates/registration/password_change_form.html:19
+msgid "Change password"
+msgstr ""
+
+#: god/templates/admin/base.html:40
+#: god/templates/registration/password_change_form.html:21
+msgid "Log out"
+msgstr ""
+
+#: god/templates/admin/base_site.html:4 god/templates/admin/base_site.html:7
+msgid "Temples System"
+msgstr "宮廟系統"
+
+#: god/templates/admin/change_form.html:22 god/templates/admin/index.html:33
+msgid "Add"
+msgstr ""
+
+#: god/templates/admin/change_form.html:32
+#: god/templates/admin/object_history.html:11
+#: god/templates/reversion/revision_form.html:16
+msgid "History"
+msgstr ""
+
+#: god/templates/admin/change_form.html:33
+#: god/templates/admin/edit_inline/stacked.html:9
+#: god/templates/admin/edit_inline/tabular.html:30
+msgid "View on site"
+msgstr ""
+
+#: god/templates/admin/change_form.html:44
+#: god/templates/admin/change_list.html:67 god/templates/admin/login.html:17
+#: god/templates/admin/auth/user/change_password.html:27
+#: god/templates/registration/login.html:27
+#: god/templates/registration/password_change_form.html:44
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] ""
+msgstr[1] ""
+
+#: god/templates/admin/change_list.html:58
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: god/templates/admin/change_list.html:78
+msgid "Filter"
+msgstr ""
+
+#: god/templates/admin/change_list_results.html:17
+msgid "Remove from sorting"
+msgstr ""
+
+#: god/templates/admin/change_list_results.html:18
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr ""
+
+#: god/templates/admin/change_list_results.html:19
+msgid "Toggle sorting"
+msgstr ""
+
+#: god/templates/admin/delete_confirmation.html:11
+#: god/templates/admin/submit_line.html:4
+msgid "Delete"
+msgstr ""
+
+#: god/templates/admin/delete_confirmation.html:18
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would result in deleting "
+"related objects, but your account doesn't have permission to delete the "
+"following types of objects:"
+msgstr ""
+
+#: god/templates/admin/delete_confirmation.html:26
+#, python-format
+msgid ""
+"Deleting the %(object_name)s '%(escaped_object)s' would require deleting the "
+"following protected related objects:"
+msgstr ""
+
+#: god/templates/admin/delete_confirmation.html:34
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? "
+"All of the following related items will be deleted:"
+msgstr ""
+
+#: god/templates/admin/delete_confirmation.html:39
+#: god/templates/admin/delete_selected_confirmation.html:44
+msgid "Yes, I'm sure"
+msgstr ""
+
+#: god/templates/admin/delete_selected_confirmation.html:10
+msgid "Delete multiple objects"
+msgstr ""
+
+#: god/templates/admin/delete_selected_confirmation.html:17
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would result in deleting related "
+"objects, but your account doesn't have permission to delete the following "
+"types of objects:"
+msgstr ""
+
+#: god/templates/admin/delete_selected_confirmation.html:25
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would require deleting the following "
+"protected related objects:"
+msgstr ""
+
+#: god/templates/admin/delete_selected_confirmation.html:33
+#, python-format
+msgid ""
+"Are you sure you want to delete the selected %(objects_name)s? All of the "
+"following objects and their related items will be deleted:"
+msgstr ""
+
+#: god/templates/admin/filter.html:2
+#, python-format
+msgid " By %(filter_title)s "
+msgstr ""
+
+#: god/templates/admin/index.html:16
+msgid "My Message"
+msgstr "我的訊息"
+
+#: god/templates/admin/index.html:22
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr ""
+
+#: god/templates/admin/index.html:39
+msgid "Change"
+msgstr ""
+
+#: god/templates/admin/index.html:49
+msgid "You don't have permission to edit anything."
+msgstr ""
+
+#: god/templates/admin/index.html:57
+msgid "Recent Actions"
+msgstr ""
+
+#: god/templates/admin/index.html:58
+msgid "My Actions"
+msgstr ""
+
+#: god/templates/admin/index.html:62
+msgid "None available"
+msgstr ""
+
+#: god/templates/admin/index.html:76
+msgid "Unknown content"
+msgstr ""
+
+#: god/templates/admin/invalid_setup.html:12
+msgid ""
+"Something's wrong with your database installation. Make sure the appropriate "
+"database tables have been created, and make sure the database is readable by "
+"the appropriate user."
+msgstr ""
+
+#: god/templates/admin/login.html:37
+msgid "Password:"
+msgstr ""
+
+#: god/templates/admin/login.html:44 god/templates/registration/login.html:56
+msgid "Forgotten your password or username?"
+msgstr ""
+
+#: god/templates/admin/login.html:48 god/templates/registration/login.html:60
+msgid "Log in"
+msgstr ""
+
+#: god/templates/admin/object_history.html:23
+#: god/templates/reversion/object_history.html:15
+#: god/templates/reversion/recover_list.html:27
+msgid "Date/time"
+msgstr ""
+
+#: god/templates/admin/object_history.html:24
+#: god/templates/reversion/object_history.html:16
+msgid "User"
+msgstr ""
+
+#: god/templates/admin/object_history.html:25
+msgid "Action"
+msgstr ""
+
+#: god/templates/admin/object_history.html:39
+#: god/templates/reversion/object_history.html:36
+msgid ""
+"This object doesn't have a change history. It probably wasn't added via this "
+"admin site."
+msgstr ""
+
+#: god/templates/admin/pagination.html:10
+msgid "Show all"
+msgstr ""
+
+#: god/templates/admin/pagination.html:11
+#: god/templates/admin/submit_line.html:3
+msgid "Save"
+msgstr ""
+
+#: god/templates/admin/search_form.html:7
+msgid "Search"
+msgstr ""
+
+#: god/templates/admin/search_form.html:9
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] ""
+msgstr[1] ""
+
+#: god/templates/admin/search_form.html:9
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr ""
+
+#: god/templates/admin/submit_line.html:5
+msgid "Save as new"
+msgstr ""
+
+#: god/templates/admin/submit_line.html:6
+msgid "Save and add another"
+msgstr ""
+
+#: god/templates/admin/submit_line.html:7
+msgid "Save and continue editing"
+msgstr ""
+
+#: god/templates/admin/auth/user/add_form.html:6
+msgid ""
+"First, enter a username and password. Then, you'll be able to edit more user "
+"options."
+msgstr ""
+
+#: god/templates/admin/auth/user/add_form.html:8
+msgid "Enter a username and password."
+msgstr ""
+
+#: god/templates/admin/auth/user/change_password.html:31
+#, python-format
+msgid "Enter a new password for the user <strong>%(username)s</strong>."
+msgstr ""
+
+#: god/templates/admin/auth/user/change_password.html:38
+#: god/templates/registration/login.html:48
+msgid "Password"
+msgstr ""
+
+#: god/templates/admin/auth/user/change_password.html:44
+#: god/templates/registration/password_change_form.html:77
+msgid "Password (again)"
+msgstr ""
+
+#: god/templates/admin/auth/user/change_password.html:45
+msgid "Enter the same password as above, for verification."
+msgstr ""
+
+#: god/templates/admin/edit_inline/stacked.html:26
+#: god/templates/admin/edit_inline/tabular.html:76
+msgid "Remove"
+msgstr ""
+
+#: god/templates/admin/edit_inline/stacked.html:27
+#: god/templates/admin/edit_inline/tabular.html:75
+#, python-format
+msgid "Add another %(verbose_name)s"
+msgstr ""
+
+#: god/templates/admin/edit_inline/tabular.html:17
+msgid "Delete?"
+msgstr ""
+
+#: god/templates/mainpage/logged_out.html:9
+#: god/templates/registration/logged_out.html:9
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr ""
+
+#: god/templates/mainpage/logged_out.html:12
+#: god/templates/registration/logged_out.html:12
+msgid "Log in again"
+msgstr ""
+
+#: god/templates/pagination/pagination.html:5
+#: god/templates/pagination/pagination.html:7
+msgid "上一頁"
+msgstr ""
+
+#: god/templates/pagination/pagination.html:21
+#: god/templates/pagination/pagination.html:23
+msgid "下一頁"
+msgstr ""
+
+#: god/templates/registration/login.html:44
+msgid "Username"
+msgstr ""
+
+#: god/templates/registration/password_change_form.html:28
+#: god/templates/registration/password_change_form.html:32
+msgid "Password change"
+msgstr ""
+
+#: god/templates/registration/password_change_form.html:40
+msgid ""
+"Please enter your old password, for security's sake, and then enter your new "
+"password twice so we can verify you typed it in correctly."
+msgstr ""
+
+#: god/templates/registration/password_change_form.html:55
+msgid "Old password"
+msgstr ""
+
+#: god/templates/registration/password_change_form.html:66
+msgid "New password"
+msgstr ""
+
+#: god/templates/registration/password_change_form.html:88
+msgid "Change my password"
+msgstr ""
+
+#: god/templates/reversion/change_list.html:8
+#: god/templates/reversion/recover_form.html:14
+#: god/templates/reversion/recover_list.html:14
+#, python-format
+msgid "Recover deleted %(name)s"
+msgstr ""
+
+#: god/templates/reversion/object_history.html:8
+msgid ""
+"Choose a date from the list below to revert to a previous version of this "
+"object."
+msgstr ""
+
+#: god/templates/reversion/object_history.html:17
+msgid "Comment"
+msgstr ""
+
+#: god/templates/reversion/recover_form.html:22
+msgid "Press the save button below to recover this version of the object."
+msgstr ""
+
+#: god/templates/reversion/recover_list.html:21
+msgid ""
+"Choose a date from the list below to recover a deleted version of an object."
+msgstr ""
+
+#: god/templates/reversion/recover_list.html:41
+msgid "There are no deleted objects to recover."
+msgstr ""
+
+#: god/templates/reversion/revision_form.html:18
+#, python-format
+msgid "Revert %(verbose_name)s"
+msgstr ""
+
+#: god/templates/reversion/revision_form.html:31
+msgid "Press the save button below to revert to this version of the object."
+msgstr ""
+
+#: god/templates/system/default/menu.html:21
+msgid "Blog"
+msgstr ""
+
+msgid "Auth"
+msgstr "使用者資料"
+
+msgid "&rsaquo;<br>Auth<br>"
+msgstr "使用者資料"
+
+msgid "Auth 管理"
+msgstr "使用者資料管理"
+
+msgid "Go homepage"
+msgstr "前往前台"
+
+msgid "Welcome"
+msgstr "歡迎"
+
+msgid "About"
+msgstr "關於"
+
+msgid "about"
+msgstr "關於"
+
+msgid "Aboutme"
+msgstr "關於本站"
+
+msgid "aboutme"
+msgstr "關於本站"
+

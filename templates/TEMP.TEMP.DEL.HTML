@@ -1,0 +1,28 @@
+
+{# ====================下面是原功能後端的 #}
+<div id="noprint">
+<form action="{% url 'inin' %}" method="GET">
+    {% csrf_token %}
+<input type="text" name="tel">
+<input type="submit" value="送出">
+</form>
+
+    {% if pps %}
+            
+    {% for pp in pps %}
+    <span>
+    {{ pp.tel }} ;;
+    </span>
+    <span>
+    ID={{ pp.id }};;
+    </span>
+<a href="{% url 'delete' %}?mid={{ pp.id }}">goto delete</a>
+<button class="jprint" data-myid="{{ pp.id }}">按鈕，，仁加想要列印這個</button>
+        <br>
+    {% endfor %}
+        {% endif %}
+
+    
+</div>
+
+

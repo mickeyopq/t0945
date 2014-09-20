@@ -1,0 +1,135 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+
+    <title>DataTables example - Scroll - vertical</title>
+<script src="{% static "mickey/jquery.js" %}"></script>
+<script src="{% static "mickey/jquery.dataTables.js" %}"></script>
+<script src="{% static "mickey/shCore.js" %}"></script>
+<link href="{% static "mickey/css/bootstrap.css" %}" rel="stylesheet">
+<link href="{% static "mickey/jquery.dataTables.css" %}" rel="stylesheet">
+<script type="text/javascript" language="javascript" class="init">
+
+$(document).ready(function() {
+    $('#example').dataTable( {
+        // "scrollY":        "920px",  //控制table的scrollY
+        "scrollCollapse": true,
+        "paging":         false,
+        "bFilter": false,
+  
+    } );
+} );
+
+    </script>
+<style>
+.create-div{
+    /*padding: 50px;*/
+}
+    .side-table{
+        width: 599px;
+    }
+    th,td{
+        text-align: center;
+    }
+    .form-group-input{
+  display: inline-block;
+  width: 177px;
+
+    }
+</style>
+
+</head>
+<body>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+<h2>批次列印 and JS表格排序</h2>
+<div class="alert alert-warning">
+<strong>描述牆</strong>還有json ajax的bug和功能未完成
+</div>    
+
+            <div class="row clearfix">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+<form action="">
+<div class="form-group create-div">
+<!-- <label>Text Input with Placeholder</label> -->
+<input class="form-control form-group-input" placeholder="Enter text">
+<input type="submit" class="btn btn-success" value=" 送出資料">
+</div>    
+</form>
+                    
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+
+            <div class="row clearfix">
+<div class="col-md-8 column">
+    <div class="container side-table">
+        <section>
+            <table id="example" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>item id</th>
+                        <th>資料</th>
+                        <th>刪除</th>
+                        <th>加入列印</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>System Architect</td>
+                        <td><a href="">刪除</a></td>
+                        <td>
+                            <button type="button" class="btn btn-link">加入列印</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Accountant</td>
+                        <td><a href="">刪除</a></td>
+                        <td>
+                            <button type="button" class="btn btn-link">加入列印</button>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </section>
+    </div>
+</div>
+                <div class="col-md-4 column">
+                     <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">列印車</h3>
+                            </div>
+                            <div class="panel-body">
+                     <button type="button" class="btn btn-info" style="width:153px;">列印</button>
+                     <button type="button" class="btn btn-danger" style="width:153px;">取消</button>
+                     <hr>
+                    <ul>
+                        <li>
+                            Lorem ipsum dolor sit amet
+                        </li>
+                        <li>
+                            Consectetur adipiscing elit
+                        </li>
+                        <li>
+                            Integer molestie lorem at massa
+                        </li>
+                    </ul>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
